@@ -89,7 +89,7 @@ const Dashboard = () => {
       id: 1,
       name: "Lotus Mandala",
       description: "Traditional lotus pattern with 8-fold symmetry",
-      thumbnail: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
+      thumbnail: "src/lotusmandala.jpg",
       createdAt: "2025-09-12",
       complexity: "Medium",
       likes: 23
@@ -98,7 +98,7 @@ const Dashboard = () => {
       id: 2,
       name: "Peacock Feather",
       description: "Intricate peacock motif for Diwali celebrations",
-      thumbnail: "https://images.pexels.com/photos/1191710/pexels-photo-1191710.jpeg?w=400&h=300&fit=crop",
+      thumbnail: "src/peacock.jpg",
       createdAt: "2025-09-10",
       complexity: "Advanced",
       likes: 45
@@ -107,7 +107,7 @@ const Dashboard = () => {
       id: 3,
       name: "Simple Dots",
       description: "Beginner-friendly dot pattern",
-      thumbnail: "https://images.pixabay.com/photo/2019/12/14/08/36/mandala-4694852_1280.jpg?w=400&h=300&fit=crop",
+      thumbnail: "src/simpledot.jpg",
       createdAt: "2025-09-08",
       complexity: "Easy",
       likes: 12
@@ -116,7 +116,7 @@ const Dashboard = () => {
       id: 4,
       name: "Festival Rangoli",
       description: "Colorful design for Pongal celebration",
-      thumbnail: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
+      thumbnail: "src/festival.jpg",
       createdAt: "2025-09-05",
       complexity: "Medium",
       likes: 34
@@ -129,7 +129,7 @@ const Dashboard = () => {
       id: 1,
       title: "Tamil Nadu Classic",
       description: "Traditional morning kolam from Chennai region with geometric precision",
-      image: "https://images.pexels.com/photos/1191710/pexels-photo-1191710.jpeg?w=300&h=200&fit=crop",
+      image: "src/tamilnadu.jpg",
       region: "Tamil Nadu",
       festival: "Daily"
     },
@@ -137,7 +137,7 @@ const Dashboard = () => {
       id: 2,
       title: "Kerala Pookalam",
       description: "Floral rangoli design for Onam celebrations",
-      image: "https://images.pixabay.com/photo/2019/12/14/08/36/mandala-4694852_1280.jpg?w=300&h=200&fit=crop",
+      image: "src/kerala.jpg",
       region: "Kerala",
       festival: "Onam"
     },
@@ -145,7 +145,7 @@ const Dashboard = () => {
       id: 3,
       title: "Andhra Muggulu",
       description: "Intricate dot patterns from Andhra Pradesh",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=200&fit=crop",
+      image: "src/andhra.jpg",
       region: "Andhra Pradesh",
       festival: "Sankranti"
     }

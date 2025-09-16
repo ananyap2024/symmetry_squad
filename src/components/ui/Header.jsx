@@ -38,30 +38,18 @@ const Header = () => {
       <div className="flex items-center justify-between h-16 px-4 lg:px-6">
         {/* Logo */}
         <Link to="/dashboard" className="flex items-center space-x-3 hover:opacity-80 transition-opacity duration-300">
-          <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center shadow-warm">
-            <svg
-              viewBox="0 0 24 24"
-              className="w-6 h-6 text-primary-foreground"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <circle cx="12" cy="12" r="3" />
-              <path d="M12 1v6m0 6v6" />
-              <path d="m21 12-6-3-6 3-6-3" />
-              <path d="M12 1L9 9l3 3 3-3z" />
-              <circle cx="12" cy="12" r="1" fill="currentColor" />
-            </svg>
-          </div>
-          <div className="hidden sm:block">
-            <h1 className="text-xl font-heading font-semibold text-foreground">
-              Kolam Generator
-            </h1>
-            <p className="text-xs text-muted-foreground font-caption">
-              Traditional Art Digitized
-            </p>
-          </div>
-        </Link>
+  <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center shadow-warm">
+    <img src="src\logo.png" alt="Kolametry Logo" className="w-10 h-10 object-contain" />
+  </div>
+  <div className="hidden sm:block">
+    <h1 className="text-xl font-heading font-semibold text-foreground">
+      Kolametry
+    </h1>
+    <p className="text-xs text-muted-foreground font-caption">
+      Where Tradition Meets Technology
+    </p>
+  </div>
+</Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-1">

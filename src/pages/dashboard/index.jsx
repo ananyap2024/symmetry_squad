@@ -89,7 +89,7 @@ const Dashboard = () => {
       id: 1,
       name: "Lotus Mandala",
       description: "Traditional lotus pattern with 8-fold symmetry",
-      thumbnail: "src/lotusmandala.jpg",
+      thumbnail: "src/lotusmandala2.jpg",
       createdAt: "2025-09-12",
       complexity: "Medium",
       likes: 23
@@ -98,7 +98,7 @@ const Dashboard = () => {
       id: 2,
       name: "Peacock Feather",
       description: "Intricate peacock motif for Diwali celebrations",
-      thumbnail: "src/peacock.jpg",
+      thumbnail: "src/peacock2.jpg",
       createdAt: "2025-09-10",
       complexity: "Advanced",
       likes: 45
@@ -167,7 +167,7 @@ const Dashboard = () => {
       date: "2025-01-14",
       region: "Tamil Nadu",
       description: "Harvest festival celebrating prosperity with traditional kolam designs",
-      patterns: ["Rice", "Sugarcane", "Sun", "Cow", "Pot"]
+      patterns: ["Rice", "Sugarcane", "Sun", "Pot"]
     }
   ];
 

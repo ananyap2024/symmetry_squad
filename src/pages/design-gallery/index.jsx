@@ -106,7 +106,7 @@ const DesignGallery = () => {
       id: 5,
       name: "Pongal Celebration",
       description: `Special kolam design for Pongal harvest festival.\nIncorporates rice and sugarcane motifs.\nCelebrates abundance and prosperity.`,
-      thumbnail: "src/pongal.jpg",
+      thumbnail: "src/pongal2.jpg",
       category: "Festival",
       complexity: "Intermediate",
       inputMethod: "text",

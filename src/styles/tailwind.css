@@ -10,11 +10,11 @@
 @layer base {
   :root {
     /* Primary Colors */
-    --color-primary: #D2691E; /* saffron-orange */
+    --color-primary: #d46804; /* saffron-orange */
     --color-primary-foreground: #FFFFFF; /* white */
     
     /* Secondary Colors */
-    --color-secondary: #8B4513; /* earth-brown */
+    --color-secondary: #621717; /* earth-brown */
     --color-secondary-foreground: #FFFFFF; /* white */
     
     /* Accent Colors */
@@ -22,8 +22,8 @@
     --color-accent-foreground: #FFFFFF; /* white */
     
     /* Background Colors */
-    --color-background: #FFF8DC; /* warm-cream */
-    --color-foreground: #2F1B14; /* deep-brown */
+    --color-background: #ffc996; /* warm-cream */
+    --color-foreground: #962800; /* deep-brown */
     
     /* Surface Colors */
     --color-card: #F5F5DC; /* subtle-beige */
@@ -32,8 +32,8 @@
     --color-popover-foreground: #2F1B14; /* deep-brown */
     
     /* Muted Colors */
-    --color-muted: #D2B48C; /* muted-earth */
-    --color-muted-foreground: #8B7355; /* muted-brown */
+    --color-muted: #fa9e69; /* muted-earth */
+    --color-muted-foreground: #36230c; /* muted-brown */
     
     /* Border and Input */
     --color-border: #D2B48C; /* muted-earth */

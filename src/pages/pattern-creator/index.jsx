@@ -23,7 +23,7 @@ const PatternCreator = () => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
-    
+
     checkMobile();
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
@@ -94,24 +94,25 @@ const PatternCreator = () => {
       case 'input':
         return (
           <div className="space-y-6">
-            <InputMethodTabs 
-              activeTab={activeInputMethod} 
-              onTabChange={handleInputMethodChange} 
+            <InputMethodTabs
+              activeTab={activeInputMethod}
+              onTabChange={handleInputMethodChange}
             />
             {renderInputMethod()}
           </div>
         );
       case 'preview':
         return (
-          <PatternPreview 
-            patternData={patternData} 
-            inputMethod={activeInputMethod} 
+          <PatternPreview
+            patternData={generatedPattern || patternData}
+            inputMethod={activeInputMethod}
+            showThumbnail={!!generatedPattern}
           />
         );
       case 'customize':
         return (
-          <CustomizationPanel 
-            onCustomizationChange={handleCustomizationChange} 
+          <CustomizationPanel
+            onCustomizationChange={handleCustomizationChange}
           />
         );
       case 'generate':
@@ -131,7 +132,7 @@ const PatternCreator = () => {
     return (
       <div className="min-h-screen bg-background">
         <Header />
-        
+
         <main className="pt-16 pb-20">
           <div className="p-4">
             <div className="mb-6">
@@ -178,9 +179,9 @@ const PatternCreator = () => {
               </div>
 
               <div className="space-y-6">
-                <InputMethodTabs 
-                  activeTab={activeInputMethod} 
-                  onTabChange={handleInputMethodChange} 
+                <InputMethodTabs
+                  activeTab={activeInputMethod}
+                  onTabChange={handleInputMethodChange}
                 />
                 {renderInputMethod()}
               </div>
@@ -189,9 +190,9 @@ const PatternCreator = () => {
 
           {/* Central Workspace - Pattern Preview */}
           <div className="flex-1 bg-background">
-            <PatternPreview 
-              patternData={patternData} 
-              inputMethod={activeInputMethod} 
+            <PatternPreview
+              patternData={patternData}
+              inputMethod={activeInputMethod}
             />
           </div>
 
@@ -204,13 +205,13 @@ const PatternCreator = () => {
                     <h3 className="text-lg font-semibold text-foreground mb-4">
                       Customization
                     </h3>
-                    <CustomizationPanel 
-                      onCustomizationChange={handleCustomizationChange} 
+                    <CustomizationPanel
+                      onCustomizationChange={handleCustomizationChange}
                     />
                   </div>
                 </div>
               </div>
-              
+
               <div className="border-t border-border p-6">
                 <AIGenerationControls
                   patternData={patternData}

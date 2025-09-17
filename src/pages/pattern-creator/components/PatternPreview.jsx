@@ -122,51 +122,96 @@ const PatternPreview = ({ patternData, inputMethod }) => {
       );
     }
 
-    if (inputMethod === 'text' && patternData) {
-      return (
-        <div className="w-full h-full flex items-center justify-center">
-          <svg
-            width="320"
-            height="320"
-            viewBox="0 0 320 320"
-            className="border border-border rounded-lg bg-background"
-            style={{
-              transform: `scale(${zoomLevel}) translate(${panOffset?.x}px, ${panOffset?.y}px)`
-            }}
-          >
-            {/* Generated pattern based on text description */}
-            <defs>
-              <pattern id="kolamPattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
-                <circle cx="20" cy="20" r="2" fill="#D2B48C" />
-              </pattern>
-            </defs>
-            
-            <rect width="320" height="320" fill="url(src\preview.png)" opacity="0.3" />
-            
-            {/* Lotus-like pattern */}
-            <g transform="translate(160,160)">
-              {Array.from({ length: 8 }, (_, i) => (
-                <g key={i} transform={`rotate(${i * 45})`}>
-                  <path
-                    d="M 0,0 Q 30,-10 60,0 Q 30,10 0,0"
-                    stroke="#D2691E"
-                    strokeWidth="3"
-                    fill="none"
-                  />
-                  <path
-                    d="M 0,0 Q 20,-15 40,-5 Q 20,5 0,0"
-                    stroke="#DC143C"
-                    strokeWidth="2"
-                    fill="none"
-                  />
-                </g>
-              ))}
-              <circle cx="0" cy="0" r="8" stroke="#d21e1eff" strokeWidth="2" fill="none" />
+if (inputMethod === 'text' && patternData) {
+  return (
+    <div className="w-full h-full flex items-center justify-center">
+      <svg
+        width="320"
+        height="320"
+        viewBox="0 0 320 320"
+        className="border border-border rounded-lg bg-background"
+        style={{
+          transform: `scale(${zoomLevel}) translate(${panOffset?.x}px, ${panOffset?.y}px)`
+        }}
+      >
+        {/* Generated pattern based on text description */}
+        <defs>
+          <pattern id="kolamPattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+            <circle cx="20" cy="20" r="2" fill="#D2B48C" />
+          </pattern>
+        </defs>
+
+        <rect width="320" height="320" fill="url(src\\preview.png)" opacity="0.3" />
+
+        {/* Lotus-like pattern with animation */}
+        <g transform="translate(160,160)">
+          {Array.from({ length: 8 }, (_, i) => (
+            <g key={i} transform={`rotate(${i * 45})`}>
+              <path
+                d="M 0,0 Q 30,-10 60,0 Q 30,10 0,0"
+                stroke="#D2691E"
+                strokeWidth="3"
+                fill="none"
+                strokeDasharray="200"
+                strokeDashoffset="200"
+              >
+                <animate
+                  attributeName="stroke-dashoffset"
+                  from="200"
+                  to="0"
+                  dur="2s"
+                  begin={`${i * 0.2}s`}
+                  repeatCount="1"
+                  fill="freeze"
+                />
+              </path>
+              <path
+                d="M 0,0 Q 20,-15 40,-5 Q 20,5 0,0"
+                stroke="#DC143C"
+                strokeWidth="2"
+                fill="none"
+                strokeDasharray="150"
+                strokeDashoffset="150"
+              >
+                <animate
+                  attributeName="stroke-dashoffset"
+                  from="150"
+                  to="0"
+                  dur="2s"
+                  begin={`${i * 0.2 + 0.5}s`}
+                  repeatCount="1"
+                  fill="freeze"
+                />
+              </path>
             </g>
-          </svg>
-        </div>
-      );
-    }
+          ))}
+          <circle
+            cx="0"
+            cy="0"
+            r="8"
+            stroke="#d21e1eff"
+            strokeWidth="2"
+            fill="none"
+            strokeDasharray="50"
+            strokeDashoffset="50"
+          >
+            <animate
+              attributeName="stroke-dashoffset"
+              from="50"
+              to="0"
+              dur="2s"
+              begin="1s"
+              repeatCount="1"
+              fill="freeze"
+            />
+          </circle>
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+
 
     return null;
   };

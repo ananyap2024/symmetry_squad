@@ -160,7 +160,7 @@ if (inputMethod === 'text' && patternData) {
                   from="200"
                   to="0"
                   dur="2s"
-                  begin={`${i * 0.2}s`}
+                  begin={`${i * 0.2 + 5}s`}
                   repeatCount="1"
                   fill="freeze"
                 />
@@ -178,7 +178,7 @@ if (inputMethod === 'text' && patternData) {
                   from="150"
                   to="0"
                   dur="2s"
-                  begin={`${i * 0.2 + 0.5}s`}
+                  begin={`${i * 0.2 + 2}s`}
                   repeatCount="1"
                   fill="freeze"
                 />
@@ -200,7 +200,7 @@ if (inputMethod === 'text' && patternData) {
               from="50"
               to="0"
               dur="2s"
-              begin="1s"
+              begin="3s"
               repeatCount="1"
               fill="freeze"
             />

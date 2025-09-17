@@ -150,18 +150,18 @@ const PatternPreview = ({ patternData, inputMethod }) => {
                   <path
                     d="M 0,0 Q 30,-10 60,0 Q 30,10 0,0"
                     stroke="#D2691E"
-                    strokeWidth="2"
+                    strokeWidth="3"
                     fill="none"
                   />
                   <path
                     d="M 0,0 Q 20,-15 40,-5 Q 20,5 0,0"
                     stroke="#DC143C"
-                    strokeWidth="1.5"
+                    strokeWidth="2"
                     fill="none"
                   />
                 </g>
               ))}
-              <circle cx="0" cy="0" r="8" stroke="#D2691E" strokeWidth="2" fill="none" />
+              <circle cx="0" cy="0" r="8" stroke="#d21e1eff" strokeWidth="2" fill="none" />
             </g>
           </svg>
         </div>
@@ -176,8 +176,8 @@ const PatternPreview = ({ patternData, inputMethod }) => {
       {/* Preview Controls */}
       <div className="flex items-center justify-between p-4 border-b border-border">
         <div className="flex items-center space-x-2">
-          <Icon name="Eye" size={20} className="text-muted-foreground" />
-          <h3 className="font-medium text-foreground">Pattern Preview</h3>
+          <Icon name="Eye" size={0} className="text-muted-foreground" />
+          <h3 className="font-medium text-foreground">Generated Pattern</h3>
           {patternData && (
             <div className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full">
               Live

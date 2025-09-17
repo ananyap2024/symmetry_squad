@@ -141,7 +141,7 @@ const PatternPreview = ({ patternData, inputMethod }) => {
               </pattern>
             </defs>
             
-            <rect width="320" height="320" fill="url(#kolamPattern)" opacity="0.3" />
+            <rect width="320" height="320" fill="url(src\preview.png)" opacity="0.3" />
             
             {/* Lotus-like pattern */}
             <g transform="translate(160,160)">
